@@ -1,107 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>share button</title>
+    <title>Share Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body{
-            background: #eee;
-            font-family: "roboto";
+        body {
+            font-family: Arial, sans-serif;
         }
-
-        .contener{
-            width: 100%;
-            height: 38pc;
-        }
-
-        .share-button{
-            position: absolute;
-            left: 0;
-            top: 38%;
-            display: flex;
+        .share-buttons {
+            display: inline-block;
             flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
         }
-
-
-        .share-button .group{
+        .share-button {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            padding: 10px 15px;
+            background-color: #66bdd8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-
-        .share-button .share-count{
-            text-align: center;
-            line-height: 1,1;
-            letter-spacing: 0;
-            user-select: none;
-            cursor: default;
-            display: block;
-            color: #222;
-            font-weight: 700;
+        .share-button:hover {
+            background-color:#66bdd8;
         }
-
-        .share-button .count{
-            display: block;
-            font-size: 19px;
+        .share-button i {
+            margin-right: 8px;
         }
-        .share-button .opsion{
-            font-weight: 500;
-            display: block;
-            font-size: 12px;
-        }
-
-        .share-button a{
-            position: relative;
-            width: 40px;
-            height: 40px;
-            font-size: 22px;
-            background: #fff;
-            margin: 5px;
-            cursor: pointer;
-            transition: 0,3s;
-        }
-
-
-
-
-
     </style>
 </head>
 <body>
-    <div>
-        <div class=""contener">
-        </div>
-        <div class="share-button">
-        <div clas ="group">
-        <span class="share-count">
-        <span class="count">252</span>
-        <span class="option">252</span>
-    </span>
-    <a href="#" class="whatsapp">
-        <div class="icon"></div>
-        <div class="titles">whatsapp</div>    
-        </div>
-    </a>
-    <a href="#" class="facebook"></a>
-        <div class="icon"></div>
-        <div class="titles">facebook</div>    
-        </div> 
-    </a>
-    <a href="#" class="twitter"></a>
-        <div class="icon"></div>
-        <div class="titles">twitter</div>    
-        </div>
-    </a>
-    <a href="#" class="share"></a>
-    <div class="icon"></div>
-    <div class="titles">share</div>    
+
+    <h2>Bagikan Artikel Ini:</h2>
+    <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" class="share-button" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=YOUR_URL" class="share-button" target="_blank">
+            <i class="fab fa-twitter"></i> Twitter
+        <a/>
+        <a href="https //www.telegram.com/sharing/share-offsite/ url=your_url" class="share-button" target="_blank">
+            <i class="fab fa-telegram"></i> telegram
+
+        <a href="https://wa.me/?text=YOUR_URL" class="share-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
     </div>
 
-
-        </span>
-        </div>    
-        </div>
-    </div>
 </body>
 </html>
