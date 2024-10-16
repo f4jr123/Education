@@ -1,0 +1,44 @@
+doctype html
+html(lang="id")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Share Button
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    style.
+      body {
+          font-family: Arial, sans-serif;
+      }
+      .share-buttons {
+          display: inline-block;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 10px;
+      }
+      .share-button {
+          display: flex;
+          align-items: center;
+          padding: 10px 15px;
+          background-color: #66bdd8;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+      }
+      .share-button:hover {
+          background-color: #66bdd8;
+      }
+      .share-button i {
+          margin-right: 8px;
+      }
+  body
+    h2 Bagikan Artikel Ini:
+    .share-buttons
+      a(href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL", class="share-button", target="_blank")
+        i.fab.fa-facebook-f Facebook
+      a(href="https://twitter.com/intent/tweet?url=YOUR_URL", class="share-button", target="_blank")
+        i.fab.fa-twitter Twitter
+      a(href="https://www.telegram.com/sharing/share-offsite/?url=YOUR_URL", class="share-button", target="_blank")
+        i.fab.fa-telegram Telegram
+      a(href="https://wa.me/?text=YOUR_URL", class="share-button", target="_blank")
+        i.fab.fa-whatsapp WhatsApp
