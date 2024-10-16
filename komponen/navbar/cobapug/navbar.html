@@ -1,4 +1,131 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Navbar</title><!-- Fonts--><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css"></head><body><div class="navbar"><div class="logo"><img alt="Logo" height="40" src="logo.jpeg" width="40"><a href="#" style="color: white;">Logo ku</a></div><div class="nav-links"><div><a href="#">Home</a><div class="dropdown"><a class="dropbtn" href="#" id="aboutBtn">About</a><ul class="dropdown-content" id="aboutDropdown"><li><a href="#">Sejarah</a></li><li><a href="#">Struktur</a></li><li><a href="#">Visi Misi</a></li><li><a href="#">Fasilitas</a></li><li class="dropdown-submenu"><a class="galeri-btn" href="#" id="galeriBtn">Galeri<span class="arrow">&#9654; <!-- Panah ke kanan --></span></a><ul class="dropdown-content-submenu" id="galeriDropdown"><li><a href="#">Photos</a></li><li><a href="#">Videos</a></li></ul></li><li class="dropdown-submenu"><a class="tentang-btn" href="#" id="tentangBtn">Tentang Kami<span class="arrow">&#9654;</span></a><ul class="dropdown-content-submenu" id="tentangDropdown"><li><a href="#">Agenda</a></li><li><a href="#">Jurusan</a></li><li><a href="#">Prestasi</a></li><li><a href="#">Ekskul</a></li></ul></li><li><a href="#">Pengumuman</a></li><li><a href="#">FAQ's</a></li></ul></div><a href="#">News</a><a href="#">Contact</a></div></div><div class="visit"><a class="visit-btn" href="#">Visit</a></div></div><!-- JavaScript--><script>// Toggle main About dropdown
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Navbar</title><!-- Fonts--><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css"><style>body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+  margin-left: 20px;
+}
+
+.navbar img {
+  height: 50px;
+  width: 50px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 15px;
+  font-size: 17px;
+  display: inline-block;
+  text-align: center;
+}
+
+.navbar .nav-links a:hover {
+  color: #1E90FF;
+}
+
+.navbar a.active {
+  color: #1E90FF;
+}
+
+.navbar .visit {
+  margin-right: 20px;
+}
+
+.navbar .visit-btn {
+  background-color: #1E90FF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  align-items: center;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-content-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 230px;
+  min-width: 180px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 10px 0;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.arrow {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+</style></head><body><div class="navbar"><div class="logo"><img alt="Logo" height="40" src="logo.jpeg" width="40"><a href="#" style="color: white;">Logo ku</a></div><div class="nav-links"><div><a href="#">Home</a><div class="dropdown"><a class="dropbtn" href="#" id="aboutBtn">About</a><ul class="dropdown-content" id="aboutDropdown"><li><a href="#">Sejarah</a></li><li><a href="#">Struktur</a></li><li><a href="#">Visi Misi</a></li><li><a href="#">Fasilitas</a></li><li class="dropdown-submenu"><a class="galeri-btn" href="#" id="galeriBtn">Galeri<span class="arrow">&#9654; <!-- Panah ke kanan --></span></a><ul class="dropdown-content-submenu" id="galeriDropdown"><li><a href="#">Photos</a></li><li><a href="#">Videos</a></li></ul></li><li class="dropdown-submenu"><a class="tentang-btn" href="#" id="tentangBtn">Tentang Kami<span class="arrow">&#9654;</span></a><ul class="dropdown-content-submenu" id="tentangDropdown"><li><a href="#">Agenda</a></li><li><a href="#">Jurusan</a></li><li><a href="#">Prestasi</a></li><li><a href="#">Ekskul</a></li></ul></li><li><a href="#">Pengumuman</a></li><li><a href="#">FAQ's</a></li></ul></div><a href="#">News</a><a href="#">Contact</a></div></div><div class="visit"><a class="visit-btn" href="#">Visit</a></div></div><!-- JavaScript--><script>// Toggle main About dropdown
 document.getElementById("aboutBtn").addEventListener("click", function (event) {
   event.preventDefault();
   document.getElementById("aboutDropdown").classList.toggle("show");
