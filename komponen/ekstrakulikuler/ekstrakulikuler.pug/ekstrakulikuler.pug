@@ -1,8 +1,10 @@
+doctype html
 html
   head
     title Ekstrakulikuler
-    style
+    style.
       body {
+        margin: 50px;
         font-family: Arial, sans-serif;
         text-align: center;
         background-color: #ffffff;
@@ -20,34 +22,35 @@ html
       .item {
         margin: 10px;
         text-align: center;
+        width: calc(33.33% - 20px); /* Three items per row */
       }
       .item img {
-        width: 200px;
-        height: 150px;
+        width: 100%; /* Responsive images */
+        height: 270px;
         object-fit: cover;
       }
       .item p {
-        margin-top: 50px;
+        margin-top: 10px; /* Reduced margin for better spacing */
         font-size: 16px;
       }
   body
     h1 Ekstrakulikuler
     .container
       .item
-        img(alt="A theater performance with actors on stage", height="150", src="https://www.sumberpengertian.id/wp-content/uploads/2018/08/Pengertian-Seni-Teater.jpg", width="200")
+        img(alt="A theater performance with actors on stage" src="https://www.sumberpengertian.id/wp-content/uploads/2018/08/Pengertian-Seni-Teater.jpg")
         p Teater
       .item
-        img(alt="A group of people performing modern dance on stage", height="150", src="https://asset.kompas.com/crops/Hg_FmNnGq-jIPeHVZ_rl2a_1lLk=/40x73:679x499/750x500/data/photo/2019/06/28/2480499129.jpg", width="200")
+        img(alt="A group of people performing modern dance on stage" src="https://asset.kompas.com/crops/Hg_FmNnGq-jIPeHVZ_rl2a_1lLk=/40x73:679x499/750x500/data/photo/2019/06/28/2480499129.jpg")
         p Tari Modern
       .item
-        img(alt="A group of scouts in uniform", height="150", src="https://images.bisnis.com/posts/2023/11/14/1714300/pramuka_1_1699953189.jpeg", width="200")
+        img(alt="A group of scouts in uniform" src="https://images.bisnis.com/posts/2023/11/14/1714300/pramuka_1_1699953189.jpeg")
         p Pramuka
       .item
-        img(alt="Cartoon characters playing badminton", height="150", src="https://asset-2.tstatic.net/kaltim/foto/bank/images/20230703_Background-Hari-Bulu-Tangkis-Sedunia-2023.jpg", width="200")
+        img(alt="Cartoon characters playing badminton" src="https://asset-2.tstatic.net/kaltim/foto/bank/images/20230703_Background-Hari-Bulu-Tangkis-Sedunia-2023.jpg")
         p Badminton
       .item
-        img(alt="A group of people swimming in a pool", height="150", src="https://perguruanpembda.com/wp-content/uploads/2024/04/Ekskul-Renang.jpg", width="200")
+        img(alt="A group of people swimming in a pool" src="https://perguruanpembda.com/wp-content/uploads/2024/04/Ekskul-Renang.jpg")
         p Renang
       .item
-        img(alt="A group of people playing musical instruments", height="150", src="https://smapramita.sch.id/wp-content/uploads/2021/08/IMG_4481-1200x600.jpg", width="200")
+        img(alt="A group of people playing musical instruments" src="https://smapramita.sch.id/wp-content/uploads/2021/08/IMG_4481-1200x600.jpg")
         p Musik
