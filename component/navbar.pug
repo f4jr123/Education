@@ -1,0 +1,231 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Navbar
+
+    // Fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet")
+
+    style.
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .navbar .logo {
+        margin-left: 20px;
+      }
+
+      .navbar img {
+        height: 50px;
+        width: 50px;
+      }
+
+      .navbar .nav-links a {
+        text-decoration: none;
+        color: black;
+        margin: 0px 15px;
+        font-size: 17px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .navbar .nav-links a:hover {
+        color: #1E90FF;
+      }
+
+      .navbar a.active {
+        color: #1E90FF;
+      }
+
+      .navbar .visit {
+        margin-right: 20px;
+      }
+
+      .navbar .visit-btn {
+        background-color: #1E90FF;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        align-items: center;
+      }
+
+      /* Dropdown */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropbtn {
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 17px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 220px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px 0;
+        border-radius: 8px;
+      }
+
+      .dropdown-content li {
+        list-style: none;
+      }
+
+      .dropdown-content li a {
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content li a:hover {
+        background-color: #ddd;
+        border-radius: 4px;
+      }
+
+      .dropdown-submenu {
+        position: relative;
+      }
+
+      .dropdown-content-submenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 230px;
+        min-width: 180px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        padding: 10px 0;
+      }
+
+      .show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .arrow {
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .arrow.rotate {
+        transform: rotate(90deg);
+      }
+
+  body
+    .navbar
+      .logo
+        img(alt="Logo" height="40" src="logo.jpeg" width="40")
+        a(href="#" style="color: white;") Logo ku
+      .nav-links
+        div
+          a(href="#") Home
+          .dropdown
+            a.dropbtn(href="#" id="aboutBtn") About
+            ul.dropdown-content(id="aboutDropdown")
+              li: a(href="#") Sejarah
+              li: a(href="#") Struktur
+              li: a(href="#") Visi Misi
+              li: a(href="#") Fasilitas
+              li.dropdown-submenu
+                a.galeri-btn(href="#" id="galeriBtn")
+                  | Galeri
+                  span.arrow &#9654; <!-- Panah ke kanan -->
+                ul.dropdown-content-submenu(id="galeriDropdown")
+                  li: a(href="#") Photos
+                  li: a(href="#") Videos
+              li.dropdown-submenu
+                a.tentang-btn(href="#" id="tentangBtn")
+                  | Tentang Kami
+                  span.arrow &#9654;
+                ul.dropdown-content-submenu(id="tentangDropdown")
+                  li: a(href="#") Agenda
+                  li: a(href="#") Jurusan
+                  li: a(href="#") Prestasi
+                  li: a(href="#") Ekskul
+              li: a(href="#") Pengumuman
+              li: a(href="#") FAQ's
+          a(href="#") News
+          a(href="#") Contact
+      .visit
+        a.visit-btn(href="#") Visit
+
+    // JavaScript
+    script.
+      // Toggle main About dropdown
+      document.getElementById("aboutBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("aboutDropdown").classList.toggle("show");
+      });
+
+      // Toggle Galeri submenu dropdown
+      document.getElementById("galeriBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("galeriDropdown").classList.toggle("show");
+
+        // Toggle arrow rotation
+        this.querySelector(".arrow").classList.toggle("rotate");
+      });
+
+      // Toggle Tentang Kami submenu dropdown
+      document.getElementById("tentangBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("tentangDropdown").classList.toggle("show");
+
+        // Toggle arrow rotation
+        this.querySelector(".arrow").classList.toggle("rotate");
+      });
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn') && !event.target.matches('.galeri-btn') && !event.target.matches('.tentang-btn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var submenus = document.getElementsByClassName("dropdown-content-submenu");
+          for (var i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i].classList.contains('show')) {
+              dropdowns[i].classList.remove('show');
+            }
+          }
+          for (var j = 0; j < submenus.length; j++) {
+            if (submenus[j].classList.contains('show')) {
+              submenus[j].classList.remove('show');
+            }
+          }
+
+          // Remove arrow rotation
+          var arrows = document.getElementsByClassName("arrow");
+          for (var k = 0; k < arrows.length; k++) {
+            if (arrows[k].classList.contains("rotate")) {
+              arrows[k].classList.remove("rotate");
+            }
+          }
+        }
+      }
