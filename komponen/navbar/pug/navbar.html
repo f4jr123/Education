@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title><!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo"><img alt="Logo" height="40" src="../logo.jpeg" width="40"><a href="#" style="color: white;">Logo
+        ku</a></div>
+    <div class="nav-links">
+      <div><a href="#">Home</a>
+        <div class="dropdown"><a class="dropbtn" href="#" id="aboutBtn">About</a>
+          <ul class="dropdown-content" id="aboutDropdown">
+            <li><a href="#">Sejarah</a></li>
+            <li><a href="#">Struktur</a></li>
+            <li><a href="#">Visi Misi</a></li>
+            <li><a href="#">Fasilitas</a></li>
+            <li class="dropdown-submenu"><a class="galeri-btn" href="#" id="galeriBtn">Galeri<span class="arrow">&#9654;
+                  <!-- Panah ke kanan -->
+                </span></a>
+              <ul class="dropdown-content-submenu" id="galeriDropdown">
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Videos</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu"><a class="tentang-btn" href="#" id="tentangBtn">Tentang Kami<span
+                  class="arrow">&#9654;</span></a>
+              <ul class="dropdown-content-submenu" id="tentangDropdown">
+                <li><a href="#">Agenda</a></li>
+                <li><a href="#">Jurusan</a></li>
+                <li><a href="#">Prestasi</a></li>
+                <li><a href="#">Ekskul</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Pengumuman</a></li>
+            <li><a href="#">FAQ's</a></li>
+          </ul>
+        </div><a href="#">News</a><a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="visit"><a class="visit-btn" href="#">Visit</a></div>
+  </div><!-- JavaScript-->
+  <script>// Toggle main About dropdown
+    document.getElementById("aboutBtn").addEventListener("click", function (event) {
+      event.preventDefault();
+      document.getElementById("aboutDropdown").classList.toggle("show");
+    });
+
+    // Toggle Galeri submenu dropdown
+    document.getElementById("galeriBtn").addEventListener("click", function (event) {
+      event.preventDefault();
+      document.getElementById("galeriDropdown").classList.toggle("show");
+
+      // Toggle arrow rotation
+      this.querySelector(".arrow").classList.toggle("rotate");
+    });
+
+    // Toggle Tentang Kami submenu dropdown
+    document.getElementById("tentangBtn").addEventListener("click", function (event) {
+      event.preventDefault();
+      document.getElementById("tentangDropdown").classList.toggle("show");
+
+      // Toggle arrow rotation
+      this.querySelector(".arrow").classList.toggle("rotate");
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn') && !event.target.matches('.galeri-btn') && !event.target.matches('.tentang-btn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var submenus = document.getElementsByClassName("dropdown-content-submenu");
+        for (var i = 0; i < dropdowns.length; i++) {
+          if (dropdowns[i].classList.contains('show')) {
+            dropdowns[i].classList.remove('show');
+          }
+        }
+        for (var j = 0; j < submenus.length; j++) {
+          if (submenus[j].classList.contains('show')) {
+            submenus[j].classList.remove('show');
+          }
+        }
+
+        // Remove arrow rotation
+        var arrows = document.getElementsByClassName("arrow");
+        for (var k = 0; k < arrows.length; k++) {
+          if (arrows[k].classList.contains("rotate")) {
+            arrows[k].classList.remove("rotate");
+          }
+        }
+      }
+    }</script>
+</body>
+
+</html>

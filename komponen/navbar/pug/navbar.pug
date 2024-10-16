@@ -1,0 +1,104 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Navbar
+
+    // Fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet")
+
+    link(rel="stylesheet" href="style.css")
+
+  body
+    .navbar
+      .logo
+        img(alt="Logo" height="40" src="logo.jpeg" width="40")
+        a(href="#" style="color: white;") Logo ku
+      .nav-links
+        div
+          a(href="#") Home
+          .dropdown
+            a.dropbtn(href="#" id="aboutBtn") About
+            ul.dropdown-content(id="aboutDropdown")
+              li: a(href="#") Sejarah
+              li: a(href="#") Struktur
+              li: a(href="#") Visi Misi
+              li: a(href="#") Fasilitas
+              li.dropdown-submenu
+                a.galeri-btn(href="#" id="galeriBtn")
+                  | Galeri
+                  span.arrow &#9654; <!-- Panah ke kanan -->
+                ul.dropdown-content-submenu(id="galeriDropdown")
+                  li: a(href="#") Photos
+                  li: a(href="#") Videos
+              li.dropdown-submenu
+                a.tentang-btn(href="#" id="tentangBtn")
+                  | Tentang Kami
+                  span.arrow &#9654;
+                ul.dropdown-content-submenu(id="tentangDropdown")
+                  li: a(href="#") Agenda
+                  li: a(href="#") Jurusan
+                  li: a(href="#") Prestasi
+                  li: a(href="#") Ekskul
+              li: a(href="#") Pengumuman
+              li: a(href="#") FAQ's
+          a(href="#") News
+          a(href="#") Contact
+      .visit
+        a.visit-btn(href="#") Visit
+
+    // JavaScript
+    script.
+      // Toggle main About dropdown
+      document.getElementById("aboutBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("aboutDropdown").classList.toggle("show");
+      });
+
+      // Toggle Galeri submenu dropdown
+      document.getElementById("galeriBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("galeriDropdown").classList.toggle("show");
+
+        // Toggle arrow rotation
+        this.querySelector(".arrow").classList.toggle("rotate");
+      });
+
+      // Toggle Tentang Kami submenu dropdown
+      document.getElementById("tentangBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("tentangDropdown").classList.toggle("show");
+
+        // Toggle arrow rotation
+        this.querySelector(".arrow").classList.toggle("rotate");
+      });
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn') && !event.target.matches('.galeri-btn') && !event.target.matches('.tentang-btn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var submenus = document.getElementsByClassName("dropdown-content-submenu");
+          for (var i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i].classList.contains('show')) {
+              dropdowns[i].classList.remove('show');
+            }
+          }
+          for (var j = 0; j < submenus.length; j++) {
+            if (submenus[j].classList.contains('show')) {
+              submenus[j].classList.remove('show');
+            }
+          }
+
+          // Remove arrow rotation
+          var arrows = document.getElementsByClassName("arrow");
+          for (var k = 0; k < arrows.length; k++) {
+            if (arrows[k].classList.contains("rotate")) {
+              arrows[k].classList.remove("rotate");
+            }
+          }
+        }
+      }
