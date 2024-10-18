@@ -4,7 +4,31 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+        link(rel="stylesheet", href="component/style/style.css")
+
     body
+
     block navbar
-    block content
-    block footer
+        include component/navbar.pug
+    
+    block konten
+    p this default main
+
+    block footer 
+    .container
+      .left
+        p
+          i.fas.fa-map-marker-alt
+          | Jl. raya Timur No.4 Batuan
+        p
+          i.fas.fa-phone
+          | (0271) 65717
+        p
+          i.fas.fa-envelope
+          | admin@smknusabangsa.sch.id
+        p copyright 2023 smknusabangsa
+      .right
+        p Tiada hari tanpa
+        p prestasi
