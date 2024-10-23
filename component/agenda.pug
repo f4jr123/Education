@@ -1,87 +1,13 @@
-doctype html
-html
-  head
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
-    style.
-      body {
-          font-family: Arial, sans-serif;
-          background-color: #f9f9f9;
-          margin: 0;
-          padding: 0;
-      }
-      .container {
-          width: 80%;
-          margin: 20px auto;
-          background-color: #fff;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          overflow: hidden;
-      }
-      .event {
-          display: flex;
-          align-items: center;
-          padding: 10px;
-          border-bottom: 1px solid #ddd;
-      }
-      .event:last-child {
-          border-bottom: none;
-      }
-      .date {
-          width: 100px;
-          text-align: center;
-          border-right: 1px solid #ddd;
-          padding: 10px;
-      }
-      .date span {
-          display: block;
-      }
-      .details {
-          flex: 1;
-          padding: 10px;
-      }
-      .details a {
-          color: #000;
-          text-decoration: none;
-      }
-      .details a:hover {
-          color: #007bff;
-      }
-      .details .time {
-          color: #666;
-          font-size: 14px;
-      }
-      .icon {
-          width: 50px;
-          text-align: center;
-          border-left: 1px solid #ddd;
-          padding: 10px;
-      }
-      .icon i {
-          font-size: 24px;
-      }
-  body
-    .container
-      .event
-        .date
-          span 30
-          span August
-          span 2026
-        .details
-          a(href='#') pengmas unujoyo : pengantar 107
-          .time
-            i.far.fa-clock
-            |  pukul: 09:00
-        .icon
-          i.far.fa-calendar-alt
-      .event
-        .date
-          span 30
-          span August
-          span 2026
-        .details
-          a(href='#', style='color: #007bff;') pengmas unujoyo : pengantar 107
-          .time
-            i.far.fa-clock
-            |  pukul: 09:00
-        .icon
-          i.far.fa-calendar-alt
+mixin eventItem(dateDay, dateMonth, dateYear, title, time)
+  .event
+    .date
+      span= dateDay
+      span= dateMonth
+      span= dateYear
+    .details
+      a(href="")= title
+      .time
+        i.far.fa-clock
+        |  pukul: #{time}
+    .icon
+      i.far.fa-calendar-alt

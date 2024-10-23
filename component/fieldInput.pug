@@ -1,16 +1,7 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Input Field
-    link(rel="stylesheet" href="../style.css")
-
-  body
-    .input-group
-      input(type="text" required)
-      label(for="") Enter Your Name
-    .input-group
-      input(type="password" required)
-      label(for="") Enter Your Email
+mixin inputGroup(type, label, isRequired = true)
+  .input-group
+    input(type=type required=isRequired)
+    label(for=type)= label
+//- Cara Manggil
+//- +inputGroup('text', 'Enter Your Name')
+//- +inputGroup('password', 'Enter Your Email')

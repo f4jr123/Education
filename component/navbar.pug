@@ -1,36 +1,37 @@
-.navbar
-      .logo
-        img(alt="Logo" height="40" src="img/logo.jpeg" width="40")
-        a(href="#" style="color: white;") Logo ku
-      .nav-links
-        div
-          a(href="index.html") Home
-          .dropdown
-            a.dropbtn(href="#" id="aboutBtn") About
-            ul.dropdown-content(id="aboutDropdown")
-              li: a(href="#") Sejarah
-              li: a(href="#") Struktur
-              li: a(href="#") Visi Misi
-              li: a(href="#") Fasilitas
-              li.dropdown-submenu
-                a.galeri-btn(href="#" id="galeriBtn")
-                  | Galeri
-                  span.arrow &#9654; <!-- Panah ke kanan -->
-                ul.dropdown-content-submenu(id="galeriDropdown")
-                  li: a(href="#") Photos
-                  li: a(href="#") Videos
-              li.dropdown-submenu
-                a.tentang-btn(href="#" id="tentangBtn")
-                  | Tentang Kami
-                  span.arrow &#9654;
-                ul.dropdown-content-submenu(id="tentangDropdown")
-                  li: a(href="agenda.html") Agenda
-                  li: a(href="#") Jurusan
-                  li: a(href="#") Prestasi
-                  li: a(href="ekskul.html") Ekskul
-              li: a(href="#") Pengumuman
-              li: a(href="faq.html") FAQ's
-          a(href="#") News
-          a(href="#") Contact
-      .visit
-        a.visit-btn(href="#") Visit
+mixin navbar(logoSrc = 'img/logo.jpeg', logoAlt = 'Logo', logoText = 'Logo ku')
+  .navbar
+    .logo
+      img(alt=logoAlt height="40" src=logoSrc width="40")
+      a(href="#" style="color: white;")= logoText
+    .nav-links
+      div
+        a(href="index.html") Home
+        .dropdown
+          a.dropbtn(href="#" id="aboutBtn") About
+          ul.dropdown-content(id="aboutDropdown")
+            li: a(href="#") Sejarah
+            li: a(href="#") Struktur
+            li: a(href="#") Visi Misi
+            li: a(href="#") Fasilitas
+            li.dropdown-submenu
+              a.galeri-btn(href="#" id="galeriBtn")
+                | Galeri
+                span.arrow &#9654;
+              ul.dropdown-content-submenu(id="galeriDropdown")
+                li: a(href="#") Photos
+                li: a(href="#") Videos
+            li.dropdown-submenu
+              a.tentang-btn(href="#" id="tentangBtn")
+                | Tentang Kami
+                span.arrow &#9654;
+              ul.dropdown-content-submenu(id="tentangDropdown")
+                li: a(href="agenda.html") Agenda
+                li: a(href="#") Jurusan
+                li: a(href="#") Prestasi
+                li: a(href="ekskul.html") Ekskul
+            li: a(href="#") Pengumuman
+            li: a(href="faq.html") FAQ's
+        a(href="#") News
+        a(href="#") Contact
+    .visit
+      a.visit-btn(href="#") Visit

@@ -1,26 +1,7 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Komponen Button
-    style.
-      * {
-        margin: 10px 10px;
-      }
-      .btn {
-        color: white;
-        background-color: #00A6FB;
-        border: none;
-        border-radius: 10px;
-        width: 100px;
-        padding: 10px;
-        align-items: center;
-        cursor: pointer;
-      }
-      .btn:hover {
-        background-color: #0582CA;
-      }
-  body
-    button.btn(type="button") Next
-    button.btn(type="button") Prev
+mixin navigationButtons(nextLabel = 'Next', prevLabel = 'Prev')
+  button.btn(type="button")= nextLabel
+  button.btn(type="button")= prevLabel
+//- cara manggil 
+//- +navigationButtons()
+//- +navigationButtons('Next Page', 'Previous Page') jika ingin diubah nama buttonnya
+

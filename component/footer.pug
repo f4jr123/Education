@@ -1,53 +1,16 @@
-doctype html
-html
-  head
-    title About Us
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
-    style.
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-      }
-      .left {
-        display: flex;
-        flex-direction: column;
-      }
-      .left p {
-        margin: 5px 0;
-      }
-      .left p i {
-        margin-right: 10px;
-      }
-      .right {
-        text-align: right;
-        font-family: 'Brush Script MT', cursive;
-        font-size: 24px;
-      }
-      .right p {
-        margin: 0;
-      }
-  body
-    .container
-      .left
-        p
-          i.fas.fa-map-marker-alt
-          | Jl. raya Timur No.4 Batuan
-        p
-          i.fas.fa-phone
-          | (0271) 65717
-        p
-          i.fas.fa-envelope
-          | admin@smknusabangsa.sch.id
-        p copyright 2023 smknusabangsa
-      .right
-        p Tiada hari tanpa
-        p prestasi
+mixin footer()
+  .container
+    .left
+      p
+        i.fas.fa-map-marker-alt
+        | Jl. raya Timur No.4 Batuan
+      p
+        i.fas.fa-phone
+        | (0271) 65717
+      p
+        i.fas.fa-envelope
+        | admin@smknusabangsa.sch.id
+      p copyright 2023 smknusabangsa
+    .right
+      p Tiada hari tanpa
+      p prestasi

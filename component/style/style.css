@@ -220,3 +220,128 @@
     border: none;
   } 
   
+  /* Agenda */
+  .containerr {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.event {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.event:last-child {
+    border-bottom: none;
+}
+.date {
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.date span {
+    display: block;
+}
+.details {
+    flex: 1;
+    padding: 10px;
+}
+.details a {
+    color: #000;
+    text-decoration: none;
+}
+.details a:hover {
+    color: #007bff;
+}
+.details .time {
+    color: #666;
+    font-size: 14px;
+}
+.icon {
+    width: 50px;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    padding: 10px;
+}
+.icon i {
+    font-size: 24px;
+}
+
+/* Button */
+.btn {
+  color: white;
+  background-color: #00A6FB;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #0582CA;
+}
+
+/* Input Field */
+.input-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 0 5px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-group input {
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 0 10px;
+  background: transparent;
+  border: 1.2px solid rgb(0, 0, 0);
+  outline: none;
+  border-radius: 5px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+  top: 0;
+  font-size: 12px;
+  background: white;
+}
+
+/* Ekskul */
+.contaiiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.item {
+  margin: 10px;
+  text-align: center;
+  width: calc(33.33% - 20px); /* Three items per row */
+}
+.item img {
+  width: 100%; /* Responsive images */
+  height: 270px;
+  object-fit: cover;
+}
+.item p {
+  margin-top: 10px; /* Reduced margin for better spacing */
+  font-size: 16px;
+}
