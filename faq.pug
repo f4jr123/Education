@@ -3,10 +3,8 @@ extends _template.pug
 block konten
   h1 Faqs
     .wrapper
-      //- Include the accordion mixin
       include component/faq.pug
 
-      //- Use the accordion mixin
       +accordion("What is Krushi?", "Krushi is a Public Charitable Trust designed to carry out farming on extensive scale Natural & Sustainable methods.")
       +accordion("What is the purpose of Krushi?", "The purpose of Krushi is to promote eco-friendly farming and sustainable agricultural practices.")
 
