@@ -1,8 +1,6 @@
 include component/data/data
-include component/faq
-include component/agenda
-include component/footer
-include component/navbar
+include component/_component.pug
+
 html(lang="en")
     head
         meta(charset="UTF-8")
@@ -16,7 +14,6 @@ html(lang="en")
 
     block navbar
       +navbar()
-
     
     block konten
 
