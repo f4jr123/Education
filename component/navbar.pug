@@ -1,4 +1,4 @@
-mixin navbar(logoSrc = 'img/logo.jpeg', logoAlt = 'Logo', logoText = 'Logo ku')
+mixin navbar(logoSrc, logoAlt = 'Logo', logoText = 'Logo ku')
   .navbar
     .logo
       img(alt=logoAlt height="40" src=logoSrc width="40")
@@ -9,29 +9,29 @@ mixin navbar(logoSrc = 'img/logo.jpeg', logoAlt = 'Logo', logoText = 'Logo ku')
         .dropdown
           a.dropbtn(href="#" id="aboutBtn") About
           ul.dropdown-content(id="aboutDropdown")
-            li: a(href="#") Sejarah
-            li: a(href="#") Struktur
-            li: a(href="#") Visi Misi
-            li: a(href="#") Fasilitas
+            li: a(href="sejarah.html") Sejarah
+            li: a(href="struktur.html") Struktur
+            li: a(href="visi-misi.html") Visi Misi
+            li: a(href="fasilitas.html") Fasilitas
             li.dropdown-submenu
               a.galeri-btn(href="#" id="galeriBtn")
                 | Galeri
                 span.arrow &#9654;
               ul.dropdown-content-submenu(id="galeriDropdown")
-                li: a(href="#") Photos
-                li: a(href="#") Videos
+                li: a(href="photos.html") Photos
+                li: a(href="videos.html") Videos
             li.dropdown-submenu
               a.tentang-btn(href="#" id="tentangBtn")
                 | Tentang Kami
                 span.arrow &#9654;
               ul.dropdown-content-submenu(id="tentangDropdown")
                 li: a(href="agenda.html") Agenda
-                li: a(href="#") Jurusan
-                li: a(href="#") Prestasi
+                li: a(href="jurusan.html") Jurusan
+                li: a(href="prestasi.html") Prestasi
                 li: a(href="ekskul.html") Ekskul
-            li: a(href="#") Pengumuman
+            li: a(href="pengumuman.html") Pengumuman
             li: a(href="faq.html") FAQ's
-        a(href="#") News
-        a(href="#") Contact
+        a(href="news.html") News
+        a(href="contact.html") Contact
     .visit
-      a.visit-btn(href="#") Visit
+      a.visit-btn(href="visit.html") Visit
