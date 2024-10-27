@@ -1,6 +1,7 @@
-mixin navigationButtons(nextLabel = 'Next', prevLabel = 'Prev')
-  button.btn(type="button")= nextLabel
-  button.btn(type="button")= prevLabel
+mixin navigationButtons(nextLabel = 'Next')
+    .button-container
+        button.btn(type="button")= nextLabel
+
 //- cara manggil 
 //- +navigationButtons()
 //- +navigationButtons('Next Page', 'Previous Page') jika ingin diubah nama buttonnya

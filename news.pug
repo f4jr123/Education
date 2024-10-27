@@ -3,5 +3,5 @@ extends _template.pug
 block konten
     .containeer
         h1 News 
-            each newsItem in rowlist
-                +newsItem(newsItem.imageSrc, newsItem.imageAlt, newsItem.description)
+        each newsItem in rowlist
+            +newsItem(newsItem.imageSrc, newsItem.imageAlt, newsItem.description)

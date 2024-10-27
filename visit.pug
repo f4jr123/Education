@@ -1,0 +1,27 @@
+extends _template.pug
+
+block konten
+    .cover
+        .kontainer
+            h1 Buku Tamu
+            hr
+            .cover
+                .form-row
+                    p Nama Pengunjung
+                    +inputGroup('text', 'Enter Your Name')
+                .form-row
+                    p Email Pengunjung
+                    +inputGroup('text', 'Enter Your Email')
+                .form-row
+                    p Asal Pengunjung
+                    +inputGroup('text', 'Enter Your Instansi')
+                .form-row
+                    p Alamat Pengunjung
+                    +inputGroup('text', 'Enter Your Address')
+                .form-row
+                    p Tujuan Berkunjung
+                    +inputGroup('text', 'Enter Your Tujuan')
+                .form-row
+                    p Keperluan Berkunjung
+                    +inputGroup('text', 'Enter Your Needs')
+                +navigationButtons('Submit')

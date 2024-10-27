@@ -288,11 +288,47 @@
 }
 
 /* Input Field */
-.input-group {
-  position: relative;
-  margin: 10px 0;
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Mengatur tombol ke sebelah kanan */
+  width: 100%;
+  margin-top: 15px;
 }
 
+.kontainer {
+  background-color: #ffffff;
+  /* padding: 20px; */
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cover {
+  /* background-color: #007bff; */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Menempatkan seluruh konten di tengah secara horizontal */
+  margin: 30px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center; /* Menyelaraskan <p> dan input secara vertikal */
+  justify-content: center; /* Menempatkan pasangan <p> dan input di tengah */
+  gap: 20px;
+  margin-bottom: 10px;
+  width: 100%; /* Opsional: Atur lebar agar fleksibel */
+  max-width: 400px; /* Menjaga elemen tetap di tengah dengan lebar tertentu */
+}
+.form-row p{
+  text-align: left;
+  width: 400px;
+}
+
+.input-group {
+  position: relative;
+  margin: 0;
+}
+
+/* Sisa CSS tetap sama */
 .input-group label {
   position: absolute;
   top: 50%;
@@ -306,7 +342,7 @@
 }
 
 .input-group input {
-  width: 320px;
+  width: 300px; /* Sesuaikan lebar input agar tidak terlalu lebar */
   height: 40px;
   font-size: 16px;
   color: rgb(0, 0, 0);
@@ -317,12 +353,14 @@
   border-radius: 5px;
 }
 
-.input-group input:focus~label,
-.input-group input:valid~label {
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
   top: 0;
   font-size: 12px;
   background: white;
 }
+
+
 
 /* Ekskul */
 .contaiiner {
@@ -427,4 +465,9 @@
   font-size: 24px;
   cursor: pointer;
   color: #333;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
 }
