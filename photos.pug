@@ -1,0 +1,9 @@
+extends _template.pug
+
+block konten
+    .style-h1 
+        h1 Galery Photos
+    .cover
+        .galery
+            each item in galeri 
+                +galeryItem(item.src, item.alt, item.caption)
