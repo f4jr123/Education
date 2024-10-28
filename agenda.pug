@@ -1,6 +1,7 @@
 extends _template
 
 block konten
-
-    each item in agenda
-        +eventItem(item.dateDay, item.dateMonth, item.dateYear, item.title, item.time)
+    h1 Agenda
+    .covers
+        each item in agenda
+            +eventItem(item.dateDay, item.dateMonth, item.dateYear, item.title, item.time)

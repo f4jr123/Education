@@ -474,6 +474,11 @@
   color: #333;
 }
 
+/* Global Style */
+.covers {
+  margin: 0 5rem 2.6rem 5rem;
+}
+
 h1 {
   text-align: center;
   padding: 20px;
