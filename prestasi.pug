@@ -1,7 +1,8 @@
 extends _template.pug
 
 block konten
-    h1 Prestasi
+    .prestasi-h1
+        h1 Prestasi
     .covers
         each item in prestasi
             +prestasiItem(item.dateDay, item.dateMonth, item.dateYear, item.title, item.images)

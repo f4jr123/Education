@@ -1,8 +1,9 @@
 extends _template.pug
 
 block konten
-    h1 Fasilitas    
+    .fasilitas-h1 
+        h1 Fasilitas    
     .cover
         .gallery
             each item in fasilitas 
-                +fasilitasItem(item.scr, item.alt, item.text)
+                +fasilitasItem(item.src, item.alt, item.text)

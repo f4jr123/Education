@@ -1,8 +1,8 @@
 extends _template.pug
 
 block konten
-
-  h1 Faqs
+  .faq-h1
+    h1 Faqs
   .wrapper
     each accordion in faqs
       +accordion(accordion.question, accordion.answer)
