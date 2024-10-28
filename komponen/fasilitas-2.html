@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>
+        Mushola
+    </title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .container:hover .overlay1,
+        .container:hover .overlay2 {
+            opacity: 1;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .container:hover .text-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img alt="A small mosque with a red roof and green walls surrounded by trees and a clear sky" height="400"
+            src="https://storage.googleapis.com/a1aa/image/8HZ9WGAUsIopNNVWLofiaz2zfFCm4Nic6Pm4WoBDxUqJdTrTA.jpg"
+            width="600" />
+        <div class="overlay1">
+        </div>
+        <div class="overlay2">
+        </div>
+        <div class="text-overlay">
+            Mushola
+        </div>
+    </div>
+</body>
+
+</html>
