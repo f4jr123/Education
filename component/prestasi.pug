@@ -1,0 +1,10 @@
+mixin eventItem(dateDay, dateMonth, dateYear, title, time, images = 'component/img/logo.jpeg', logoAlt = 'Img')
+  .event
+    .date
+      span= dateDay
+      span= dateMonth
+      span= dateYear
+    .details
+      a(href="")= title
+    .prestasi-img
+      img(alt=logoAlt height="40" src=images width="40")

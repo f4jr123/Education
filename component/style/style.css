@@ -272,6 +272,12 @@
     font-size: 24px;
 }
 
+.prestasi-img {
+    width: 10%;
+    border-left: 1px solid #ddd;
+    padding: 10px;
+}
+
 /* Button */
 .btn {
   color: white;
