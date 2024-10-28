@@ -1,12 +1,32 @@
 extends _template.pug
 
 block konten
-    .carousel
-      .arrow
-        | &lt;
+  .header
+    img(src="#" alt="Front view of East High School building with banners and trees" width="800" height="200")
 
-        each kolumnItem in kolumn
-            +kolumnItem(kolumnItem.imageSrc, kolumnItem.imageAlt, kolumnItem.description)
+  .titlee
+    h1 SMK NUSA BANGSA
+    p SMK bisaaa!
 
-      .arrow
-        | &lt;
+  .content
+    .text
+      h2 Sambutan Kepala Sekolah
+      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        | industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        | scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+        | into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+        | release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+        | software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    .image
+        img(src="#" alt="Illustration of a school principal" width="200" height="300")
+
+  .carousel
+    .arrow
+      | &lt;
+
+      each kolumnItem in kolumn
+          +kolumnItem(kolumnItem.imageSrc, kolumnItem.imageAlt, kolumnItem.description)
+
+    .arrow
+      | &lt;

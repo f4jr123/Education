@@ -477,3 +477,82 @@ h1 {
   text-align: center;
   padding: 20px;
 }
+
+/* Index Style */
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header img {
+  width: 80%;
+  height: 615;
+}
+
+.titlee {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.titlee h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.titlee p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: gray;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 20px;
+}
+
+.content .text {
+  max-width: 600px;
+  margin-right: 20px;
+}
+
+.content .text h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.content .text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.content .image {
+  max-width: 200px;
+}
+
+.content .image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Fasilitas Style */
+.covering {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
