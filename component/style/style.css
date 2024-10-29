@@ -383,23 +383,26 @@
 /* Ekskul */
 .contaiiner {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 .item {
-  margin: 10px;
+  margin: 40px;
+  display: flex;
   text-align: center;
-  width: calc(33.33% - 20px); /* Three items per row */
+  width: calc(85% - 45%); /* Three items per row */
 }
 .item img {
   width: 100%; /* Responsive images */
-  height: 270px;
+  height: 150px;
   object-fit: cover;
 }
 .item p {
+  text-align: center;
   margin-top: 10px; /* Reduced margin for better spacing */
-  font-size: 16px;
+  font-size: 20px;
 }
 
 /* Share Button */
@@ -640,4 +643,34 @@
   margin-top: 10px;
   font-size: 18px;
   font-style: italic;
+}
+
+/* contact */
+.contact-container {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.contact-info {
+  margin-right: 20px;
+}
+.contact-info i {
+  color: #28a745;
+  margin-right: 10px;
+}
+.contact-info i.fa-envelope {
+  color: #dc3545;
+}
+.contact-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.contact-info p span {
+  margin-left: 5px;
+}
+.map {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ddd;
 }
