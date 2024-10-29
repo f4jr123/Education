@@ -455,20 +455,21 @@
 }
 
 /* KolumnLIst */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 3rem;
+}
 .carousel {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .carousel img {
-  width: 200px;
-  height: 150px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 10px;
 }
 .carousel div {
   text-align: center;
@@ -476,13 +477,12 @@
 }
 .carousel div p {
   margin-top: 10px;
-  font-size: 14px;
-  color: #333;
+  font-size: 16px;
 }
-.carousel .arrow {
-  font-size: 24px;
+.panah {
+  font-size: 40px;
   cursor: pointer;
-  color: #333;
+  user-select: none;
 }
 
 /* Index Style */

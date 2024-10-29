@@ -21,12 +21,9 @@ block konten
     .image
         img(src="#" alt="Illustration of a school principal" width="200" height="300")
 
-  .carousel
-    .arrow
-      | &lt;
-
-      each kolumnItem in kolumn
-          +kolumnItem(kolumnItem.imageSrc, kolumnItem.imageAlt, kolumnItem.description)
-
-    .arrow
-      | &lt;
+  .carousel-container
+    .carousel
+      .panah &lt;
+      each item in kolumn 
+        +kolumnlItem(item.imageSrc, item.imageAlt, item.description)
+      .panah &gt;
