@@ -383,28 +383,31 @@
 /* Ekskul */
 .contaiiner {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 100px;
+  justify-content: center;
+  margin-top: 20px;
 }
-.item {
-  margin: 40px;
+
+.row {
   display: flex;
-  text-align: center;
-  width: calc(85% - 45%); /* Three items per row */
+  justify-content: center;
+  width: 100%;
 }
+
+.item {
+  margin: 20px;
+}
+
 .item img {
-  width: 100%; /* Responsive images */
+  width: 200px;
   height: 150px;
   object-fit: cover;
 }
-.item p {
-  text-align: center;
-  margin-top: 10px; /* Reduced margin for better spacing */
-  font-size: 20px;
-}
 
+.captions {
+  margin-top: 10px;
+  font-size: 18px;
+}
 /* Share Button */
 .share-buttons {
   display: inline-block;

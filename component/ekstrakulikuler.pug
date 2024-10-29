@@ -1,8 +1,7 @@
-mixin activityItem(imageSrc, imageAlt, description)
+mixin ektraItem(imageSrc, imageAlt, description)
   .item
-    img(alt=imageAlt, src=imageSrc)
-    p #{description}
-
+    img(src=imageSrc alt=imageAlt)
+    .captions= description
 
 //- each ekstra in ekskul
 //-   +activityItem(ekstra.imageSrc, ekstra.imageAlt, ekstra.description) //pemanggilan
