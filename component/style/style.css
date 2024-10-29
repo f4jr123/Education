@@ -674,3 +674,26 @@
   height: 150px;
   border: 1px solid #ddd;
 }
+
+/*sejarah*/
+.konten {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.konten img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+.konten p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.foo {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
