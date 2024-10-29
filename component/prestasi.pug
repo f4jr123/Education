@@ -1,4 +1,4 @@
-mixin prestasiItem(dateDay, dateMonth, dateYear, title, time, images = 'component/img/logo.jpeg', logoAlt = 'Img')
+mixin prestasiItem(dateDay, dateMonth, dateYear, title, images, logoAlt)
   .event
     .date
       span= dateDay
@@ -7,4 +7,4 @@ mixin prestasiItem(dateDay, dateMonth, dateYear, title, time, images = 'componen
     .details
       a(href="")= title
     .prestasi-img
-      img(alt=logoAlt height="40" src=images width="40")
+      img(alt=logoAlt src=images width="100%")
