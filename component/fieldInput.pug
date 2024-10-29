@@ -1,7 +1,6 @@
-mixin inputGroup(type, label, isRequired = true)
-  .input-group
-    input(type=type required=isRequired)
-    label(for=type)= label
-//- Cara Manggil
-//- +inputGroup('text', 'Enter Your Name')
-//- +inputGroup('password', 'Enter Your Email')
+mixin inputGroup(name, type, label, isRequired = true)
+  .form-row 
+    p #{name}
+    .input-group
+      input(type=type required=isRequired)
+      label(for=type)= label
