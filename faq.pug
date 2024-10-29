@@ -3,8 +3,8 @@ extends _template.pug
 block konten
   .faq-h1
     h1 Faqs
-  .wrapper
-    each accordion in faqs
-      +accordion(accordion.question, accordion.answer)
+    .wrapper
+      each accordion in faqs
+        +accordion(accordion.question, accordion.answer)
 
   script(src="component/script/faq.js")
