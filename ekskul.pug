@@ -1,0 +1,9 @@
+extends _template
+
+block konten
+    .style-h1
+        h1 Ekstrakullikuler
+    .item
+        each ekstra in ekskul 
+            +activityItem(ekstra.imageSrc, ekstra.imageAlt, ekstra.description)
+                
