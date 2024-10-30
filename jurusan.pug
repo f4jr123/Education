@@ -1,0 +1,18 @@
+extends _template.pug
+
+block konten 
+  .style-h1
+      h1 Tentang kami 
+  .container-jurusan
+    .contentt
+      img(src="https://i.pinimg.com/564x/bc/1a/6a/bc1a6a89fde5e24cfadfbdbdb0a9f5ad.jpg", alt="A large building with multiple windows and banners, labeled 'EAST HIGH SCHOOL'", height="200", width="300")
+      .text-jurusan
+        | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+    .footer-jurusan SMK NUSA BANGSA
+  .paragraf
+    p Dengan beberapa jurusan
+  .carousel-container
+    .carousel
+      each item in jurusan
+        +kolumnlItem(item.imageSrc, item.imageAlt, item.description)
+      

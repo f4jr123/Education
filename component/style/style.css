@@ -651,9 +651,9 @@
 /* contact */
 .contact-container {
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .contact-info {
   margin-right: 20px;
@@ -676,6 +676,7 @@
   width: 200px;
   height: 150px;
   border: 1px solid #ddd;
+  margin-top: 0%;
 }
 
 /*sejarah*/
@@ -700,4 +701,44 @@
   font-size: 14px;
   line-height: 1.6;
   text-align: justify;
+}
+/*jurusan*/
+.container-jurusan {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.container-jurusan img {
+  width: 100%;
+  height: auto;
+}
+.title-jurusan {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.contentt {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.contentt img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+.paragraf p{
+  margin-left: 500px;
+}
+
+.text-jurusan {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.footer-jurusan {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
 }
