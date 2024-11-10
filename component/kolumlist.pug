@@ -1,4 +1,5 @@
-mixin kolumnlItem(imageSrc, imageAlt, description)
+mixin kolumnlItem(imageSrc, imageAlt, description, link)
   div
     img(src=imageSrc, alt=imageAlt, width="300", height="200")
-    p= description
+    a(href=link)
+      p= description

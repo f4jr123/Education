@@ -296,7 +296,7 @@
   background-color: #00A6FB;
   border: none;
   border-radius: 10px;
-  width: 100px;
+  width: auto;
   padding: 10px;
   align-items: center;
   cursor: pointer;
@@ -312,6 +312,14 @@
   width: 100%;
   margin-top: 15px;
 }
+
+.button-container-left {
+  display: flex;
+  justify-content: flex-start; /* Mengatur tombol ke sebelah kiri */
+  width: 100%;
+  margin-top: 15px;
+}
+
 
 .kontainer {
   background-color: #ffffff;
