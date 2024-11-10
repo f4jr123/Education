@@ -1,6 +1,11 @@
-mixin navigationButtons(nextLabel = 'Next')
+mixin navigationButtons(nextLabel = 'Next', nextLink = '#')
     .button-container
-        button.btn(type="button")= nextLabel
+        a.btn(href=nextLink) #{nextLabel}
+
+
+mixin navigationButtonsLeft(nextLabel = 'Next', nextLink = '#')
+    .button-container
+        a.btn(href=nextLink) #{nextLabel}
 
 //- cara manggil 
 //- +navigationButtons()

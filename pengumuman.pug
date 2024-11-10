@@ -4,7 +4,7 @@ block konten
   .style-h1
     h1 Pengumuman
   .cover
-      .gallery
-        each item in pengumuman1
+    .gallery
+        each item in pengumuman
           +kolumnlItem(item.imageSrc, item.imageAlt, item.description)
-      +navigationButtons('next')
+        +navigationButtonsLeft('Next', 'pengumuman2.html')

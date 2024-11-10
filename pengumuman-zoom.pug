@@ -1,0 +1,22 @@
+extends _template.pug
+
+block konten 
+    .style-h1 
+        h1 pengumuman 
+    .covers
+        .div.konten
+        img(alt="link" height="300" src="component/img/link.png" width="300")
+    .div.foo
+        p SMK Nusa Bangsa mulai tanggal 14 maret 2024 membuka pendaftaran gelombang 1     
+        .paragraf
+            p pengumuman lainnya
+    .carousel-container           
+    .carousel
+      .panah &lt;
+      each item in pengumumanzoom 
+        +kolumnlItem(item.imageSrc, item.imageAlt, item.description)
+      .panah &lt;
+        
+      
+
+
