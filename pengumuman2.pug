@@ -5,6 +5,6 @@ block konten
     h1 Pengumuman
   .cover
     .gallery
-        each item in pengumuman2
-          +kolumnlItem(item.imageSrc, item.imageAlt, item.description)
-        +navigationButtonsLeft('prev', 'pengumuman.html')
+      each item in pengumuman2
+        +kolumnlItem(item.imageSrc, item.imageAlt, item.description, item.link)
+    +navigationButtonsLeft('Prev', 'pengumuman.html')
