@@ -1,0 +1,20 @@
+extends _template.pug
+
+block konten
+    .style-h1
+        h1 visi misi 
+    .covers
+        .div.konten
+            img(alt="logo" height="200" src="component/img/logo.jpeg" width="200")
+            p
+            | visi: menjadikan sekolah-sekolah yang unggul dalam prestasi akademik dan non-akademik.
+            br
+            | misi: menerapkan sistem teknologi informasi dalam manajemen, pelayanan, dan pembelajaran.
+
+    .carousel-container
+    .carousel
+      .panah &lt;
+      each item in kolumn 
+        +kolumnlItem(item.imageSrc, item.imageAlt, item.description)
+      .panah &gt;
+
