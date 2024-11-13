@@ -7,8 +7,13 @@ mixin navigationButtonsLeft(nextLabel = 'Next', nextLink = '#')
     .button-container-left
         a.btn(href=nextLink) #{nextLabel}
 
-mixin Buttons(nextLabel = 'Next')
-    button.btn(type="button")= nextLabel
+mixin Buttons(nextLabel = 'Next', link = null)
+    if link
+        a.btn(href=link)= nextLabel
+    else
+        button.btn(type="button")= nextLabel
+
+
 //- cara manggil 
 //- +navigationButtons()
 //- +navigationButtons('Next Page', 'Previous Page') jika ingin diubah nama buttonnya
