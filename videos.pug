@@ -4,9 +4,5 @@ block konten
     .style-h1  
         h1 Galeri Vidio
     .beranda
-        video(width="900", height="350", controls)
-            source(src="component/vidio/tataboga.mp4", type="video/mp4")
-        p Vidio promosi SMK Nusa Bangsa program keahlian Tataboga
-        video(width="900", height="350", controls)
-            source(src="component/vidio/kompetensi.mp4", type="video/mp4")
-        p Kegiatan Uji Kompetensi Teknik Komputer Jaringan
+        each video in vidio
+            +videoBlock(video.src, video.caption)
