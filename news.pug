@@ -5,5 +5,5 @@ block konten
         h1 News
     .covers
         .containeer
-        each newsItem in rowlist
+        each newsItem in news
             +newsItem(newsItem.imageSrc, newsItem.imageAlt, newsItem.description, newsItem.linkHref)

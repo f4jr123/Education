@@ -9,4 +9,4 @@ block konten
     .right-section
       h2 Berita Terbaru:
       each newsItem in rowlist 
-        +newsItem(newsItem.imageSrc, newsItem.imageAlt, newsItem.description, newsItem.linkHref)
+        +newsItem(item.imageSrc, item.imageAlt, item.description, item.linkHref)
