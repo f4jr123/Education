@@ -1,0 +1,18 @@
+extends _template
+
+block konten
+    .style-h1 
+        h1 pengumuman 
+    .covers
+        .div.konten
+        img(alt="123" height="300" src="component/img/123.jpg" width="300")
+        .div.foo
+            p himbauan untuk siswa SMK Nusa Bangsa untuk selalu berhati-hati membawa kendaraan     
+        br
+        br
+        .paragraf
+            h2 pengumuman lainnya
+        .carousel-container           
+            .carousel
+                each item in pengumumanzoom 
+                    +kolumnlItem(item.imageSrc, item.imageAlt, item.description)
