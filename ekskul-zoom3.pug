@@ -1,0 +1,20 @@
+extends _template.pug
+
+block konten
+    .contaiiner
+        .image-container
+         img(src="https://images.bisnis.com/posts/2023/11/14/1714300/pramuka_1_1699953189.jpeg" alt="A group of people performing a play on stage with various props and costumes")
+        .text-container
+            p
+                strong Mengembangkan kreativitas.
+                | Siswa akan belajar untuk berpikir kreatif, mulai dari memerankan karakter, membuat dialog, hingga berimprovisasi.
+            ul
+                li Melatih mental berani. Siswa akan terbiasa dengan tekanan dan tampil di depan umum.
+                li Belajar berbagai seni pertunjukan. Siswa akan belajar mengenal tari, dekorasi, suara, rancang busana, hingga rias merias.
+
+    .carousel-container
+        .carousel
+            .panah &lt;
+            each item in ekskuls
+                +kolumnlItem(item.imageSrc, item.imageAlt, item.description,item.link)
+            .panah &gt;
