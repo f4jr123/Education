@@ -1,0 +1,4 @@
+mixin videoBlock(src, caption, width=900, height=350)
+    video(width=width, height=height, controls)
+        source(src=src, type="video/mp4")
+    p= caption
