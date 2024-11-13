@@ -12,6 +12,9 @@
   text-align: center;
   padding: 20px;
 }
+.styles-h1 {
+  padding: 20px 0;
+}
 
 /* Navbar */
 .navbar {
@@ -741,4 +744,68 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
+}
+
+/* Alumni Style */
+.popper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contened {
+  display: flex;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex: 3;
+  margin-right: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.testimonial p {
+  font-size: 12px;
+  color: #555;
+}
+
+.sidebar {
+  flex: 1;
+  padding-left: 20px;
+  border-left: 1px solid #ddd;
+}
+
+.categories {
+  margin-top: 20px;
+}
+
+.categories h2 {
+  font-size: 18px;
+  color: #000;
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categories ul li {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
 }

@@ -1,3 +1,37 @@
 extends _template.pug
 
 block konten 
+    div.popper
+        .styles-h1
+            h1 Apa kata Alumni?
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        p &nbsp;
+        +Buttons('View All')
+        p &nbsp;
+        div.contened
+            div.testimonials
+                div.testimonial
+                    img(alt="Photo of alumni 1" height="150" src="https://storage.googleapis.com/a1aa/image/nMpdG1KYBk7iM1zH0MGKvX7ILFfi6AIWc5Avcu8C6O9JQG3JA.jpg" width="150")
+                    p "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                    p
+                        strong @alumni1
+                div.testimonial
+                    img(alt="Photo of alumni 2" height="150" src="https://storage.googleapis.com/a1aa/image/J4nb7tXky4rlJxeSPUQQWMGfyNpJLcSdovG0QYfs3nxsAZcnA.jpg" width="150")
+                    p "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                    p
+                        strong @alumni2
+                div.testimonial
+                    img(alt="Photo of alumni 3" height="150" src="https://storage.googleapis.com/a1aa/image/aykwL6FFetVmZqnp8fZCHKw1s7eDN9vhQSezVgHHo4GEBy4OB.jpg" width="150")
+                    p "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                    p
+                        strong @alumni3
+            div.sidebar
+                div.categories
+                    h2 Categories
+                    ul
+                        li RPL
+                        li TKJ
+                        li MM
+                        li TB
+                        li OTKP
+        
