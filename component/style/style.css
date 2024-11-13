@@ -800,3 +800,27 @@
 .text-container li {
   margin-bottom: 10px;
 }
+/*vidio*/
+.beranda {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+/*h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.video {
+  margin-bottom: 20px;
+}
+.video img {
+  width: 100%;
+  border-radius: 8px;
+}
+.video p {
+  font-size: 16px;
+  margin-top: 10px;
+}
