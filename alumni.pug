@@ -10,21 +10,8 @@ block konten
         p &nbsp;
         div.contened
             div.testimonials
-                div.testimonial
-                    img(alt="Photo of alumni 1" height="150" src="https://storage.googleapis.com/a1aa/image/nMpdG1KYBk7iM1zH0MGKvX7ILFfi6AIWc5Avcu8C6O9JQG3JA.jpg" width="150")
-                    p "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-                    p
-                        strong @alumni1
-                div.testimonial
-                    img(alt="Photo of alumni 2" height="150" src="https://storage.googleapis.com/a1aa/image/J4nb7tXky4rlJxeSPUQQWMGfyNpJLcSdovG0QYfs3nxsAZcnA.jpg" width="150")
-                    p "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-                    p
-                        strong @alumni2
-                div.testimonial
-                    img(alt="Photo of alumni 3" height="150" src="https://storage.googleapis.com/a1aa/image/aykwL6FFetVmZqnp8fZCHKw1s7eDN9vhQSezVgHHo4GEBy4OB.jpg" width="150")
-                    p "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-                    p
-                        strong @alumni3
+                each item in alumni
+                    +alumni(item.imageSrc, item.imageAlt, item.description, item.name)
             div.sidebar
                 div.categories
                     h2 Categories
