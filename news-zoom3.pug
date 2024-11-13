@@ -1,0 +1,12 @@
+extends _template.pug
+
+block konten 
+  .containerrr
+    .left-section
+      h1 Kegiatan wisuda yang dilalaksanakan angkatan 2025-2026 sangat meriah
+      img(src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiVge1lTUwSvP13bMs9MFuHr7RJi5FijyLMMb3m9WYSCTFP-Hzxr7d3sJeWE3OMg80z1shxwnNtsuQ1r7z1QkqstfG60QiUUPK0TOkTSSikdCNi5BRh0HpHMWr6XM9cfkR7inn6yePZC87/s1600/IMG_4453.JPG" alt="A group of student paintings displayed on a wall, with a person observing them." width="600" height="300")
+      p Menggelar pameran seni lukis di RTH Taman Bung Karno dalam Pekan Apresiasi Seni Kabupaten Buleleng. Pameran ini merupakan kerja sama dengan Sanggar Seni Lukis Kaca Nagasepaha t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    .right-section
+      h2 Berita Terbaru:
+      each item in rowlist 
+        +newsItem(item.imageSrc, item.imageAlt, item.description, item.linkHref)

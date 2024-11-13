@@ -299,7 +299,7 @@
   background-color: #00A6FB;
   border: none;
   border-radius: 10px;
-  width: 100px;
+  width: auto;
   padding: 10px;
   align-items: center;
   cursor: pointer;
@@ -315,6 +315,14 @@
   width: 100%;
   margin-top: 15px;
 }
+
+.button-container-left {
+  display: flex;
+  justify-content: flex-start; /* Mengatur tombol ke sebelah kiri */
+  width: 100%;
+  margin-top: 15px;
+}
+
 
 .kontainer {
   background-color: #ffffff;
@@ -704,6 +712,7 @@
   font-size: 14px;
   line-height: 1.6;
   text-align: justify;
+  max-width: 600px;
 }
 /*jurusan*/
 .container-jurusan {
@@ -745,6 +754,7 @@
   font-weight: bold;
   margin-top: 20px;
 }
+<<<<<<< HEAD
 
 /* Alumni Style */
 .popper {
@@ -809,3 +819,49 @@
   color: #333;
   margin: 5px 0;
 }
+=======
+/*newszoom1*/
+.containerrr {
+  display: flex;
+  justify-content: space-between;
+}
+.left-section {
+  width: 60%;
+  padding: 20px;
+}
+.right-section {
+  width: 35%;
+  padding: 20px;
+  border-left: 2px solid #000;
+}
+.left-section img {
+  width: 100%;
+  height: auto;
+}
+.left-section h1 {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.left-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.right-section h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/* .news-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+.news-item img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.news-item p {
+  font-size: 14px;
+  margin: 0;
+} */
+>>>>>>> origin

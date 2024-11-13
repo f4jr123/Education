@@ -1,4 +1,5 @@
-mixin newsItem(imageSrc, imageAlt, description)
+mixin newsItem(imageSrc, imageAlt, description, linkHref)
   .news-item
     img(alt=imageAlt, height="100", src=imageSrc, width="150")
-    p #{description}
+    a(href=linkHref)
+      p #{description}
