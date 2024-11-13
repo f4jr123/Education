@@ -1,0 +1,20 @@
+extends _template.pug
+
+block konten
+    .contaiiner
+        .image-container
+         img(src="https://asset.kompas.com/crops/Hg_FmNnGq-jIPeHVZ_rl2a_1lLk=/40x73:679x499/750x500/data/photo/2019/06/28/2480499129.jpg" alt="A group of people performing a play on stage with various props and costumes")
+        .text-container
+            p
+                strong Mengembangkan kreativitas.
+                | Siswa akan belajar untuk berpikir kreatif, mulai dari memerankan karakter, membuat dialog, hingga berimprovisasi.
+            ul
+                li Melatih mental berani. Siswa akan terbiasa dengan tekanan dan tampil di depan umum.
+                li Belajar berbagai seni pertunjukan. Siswa akan belajar mengenal tari, dekorasi, suara, rancang busana, hingga rias merias.
+
+    .carousel-container
+        .carousel
+            .panah &lt;
+            each item in ekskuls
+                +kolumnlItem(item.imageSrc, item.imageAlt, item.description,item.link)
+            .panah &gt;

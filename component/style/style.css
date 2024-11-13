@@ -782,16 +782,29 @@
   font-size: 20px;
   margin-bottom: 20px;
 }
-/* .news-item {
-  display: flex;
-  margin-bottom: 20px;
+/*ekskul-zoom*/
+.contaiiner {
+  text-align: center;
 }
-.news-item img {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
+.image-container {
+  display: inline-block;
+  overflow: hidden;
 }
-.news-item p {
-  font-size: 14px;
+.image-container img {
+  width: 700px; 
+  height: 500px; 
+}
+.text-container {
+  text-align: left;
+  margin-top: 20px;
+}
+.text-container p {
   margin: 0;
-} */
+  font-size: 16px;
+}
+.text-container ul {
+  padding-left: 20px;
+}
+.text-container li {
+  margin-bottom: 10px;
+}

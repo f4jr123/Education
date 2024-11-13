@@ -3,7 +3,7 @@ extends _template
 block konten
     .style-h1
         h1 Ekstrakullikuler
-    .contaiiner
-        .row
+    .cover
+        .gallery
             each ekstra in ekskul 
-                +ektraItem(ekstra.imageSrc, ekstra.imageAlt, ekstra.linkHref, ekstra.description)
+                +kolumnItem(ekstra.imageSrc, ekstra.imageAlt, ekstra.description, extra.link)
