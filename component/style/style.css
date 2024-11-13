@@ -715,7 +715,7 @@ a {
   font-size: 14px;
   line-height: 1.6;
   text-align: justify;
-  max-width: 600px;
+  max-width: 100%;
 }
 /*jurusan*/
 .container-jurusan {
